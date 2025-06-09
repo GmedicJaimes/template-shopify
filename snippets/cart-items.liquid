@@ -1,0 +1,22 @@
+{% if cart.item_count > 0 %}
+  <ul class="cart-items">
+    {% for item in cart.items %}
+      <li class="cart-item">
+        <div class="cart-item__image">
+          <img src="{{ item.image | image_url: 'small' }}" alt="{{ item.product.title }}" width="50" height="50">
+        </div>
+        <div class="cart-item__details">
+          <h3 class="cart-item__title">{{ item.product.title }}</h3>
+          <p class="cart-item__quantity">Cantidad: {{ item.quantity }}</p>
+          <p class="cart-item__price">{{ item.price | money }}</p>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+  <div class="cart-total">
+    <p>Total: {{ cart.total_price | money }}</p>
+    <a href="{{ routes.cart_url }}" class="btn btn--checkout">Proceder al pago</a>
+  </div>
+{% else %}
+  <p>No hay artículos en el carrito.</p>
+{% endif %}

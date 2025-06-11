@@ -11,18 +11,18 @@
   "sections": {
     "banner": {
       "type": "banner",
-      "settings": {
-        "alt": "Banner",
-        "message": "¡Bienvenido a nuestra tienda!"
-      }
+      
     },
     "carousel": {
-      "type": "categories-carousel",
-      "settings": {}
-    }
+      "type": "categories-carousel"
+    },
+    "products": {
+      "type": "products"
+    },
   },
   "order": [
     "banner",
-    "carousel"
+    "carousel",
+    "products"
   ]
 }

@@ -1,0 +1,12 @@
+{
+  "products": [{"handle":"producto-1","image":"producto1.jpg","title":"Producto 1","price":12000},
+        {"handle":"producto-2","image":"producto2.jpg","title":"Producto 2","price":15000},
+        {"handle":"producto-3","image":"producto3.jpg","title":"Producto 3","price":18000},
+        {"handle":"producto-4","image":"producto4.jpg","title":"Producto 4","price":20000},
+        {"handle":"producto-5","image":"producto5.jpg","title":"Producto 5","price":22000},
+        {"handle":"producto-6","image":"producto6.jpg","title":"Producto 6","price":25000},
+        {"handle":"producto-7","image":"producto7.jpg","title":"Producto 7","price":27000},
+        {"handle":"producto-8","image":"producto8.jpg","title":"Producto 8","price":30000},
+        {"handle":"producto-9","image":"producto9.jpg","title":"Producto 9","price":32000},
+        {"handle":"producto-10","image":"producto10.jpg","title":"Producto 10","price":35000}]
+}

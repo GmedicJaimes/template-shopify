@@ -1,49 +1,51 @@
-{{ 'carousel.css' | asset_url | stylesheet_tag }}
+{{ 'categories.css' | asset_url | stylesheet_tag }}
 
 <section class="categories-carousel">
-  <button class="carousel-arrow left" onclick="scrollCategories(-1)">&#8592;</button>
+  <div class="carousel-header">
+    <h2>{{ section.settings.title }}</h2>
+    <p>{{ section.settings.subtitle }}</p>
+  </div>
+
   <div class="carousel-viewport">
     <div class="carousel-track" id="carousel-track">
-      {% for block in section.blocks %}
-        <div class="category-card">
-          {% if block.settings.image != blank %}
-            <img
-              src="{{ block.settings.image | image_url: width: 200 }}"
-              alt="{{ block.settings.title | escape }}"
-              width="200"
-              height="200"
-            >
-          {% endif %}
-          <span>{{ block.settings.title }}</span>
-        </div>
-      {% endfor %}
+      <!-- Categorías fijas, puedes cambiar las imágenes y nombres según tus necesidades -->
+      <div class="category-card">
+        <img src="{{ 'limpieza.jpg' | asset_url }}" alt="Categoría 1" width="200" height="200">
+        <span>Limpieza Facial</span>
+      </div>
+      <div class="category-card">
+        <img src="{{ 'hidratacion.avif' | asset_url }}" alt="Categoría 2" width="200" height="200">
+        <span>Hidratación</span>
+      </div>
+      <div class="category-card">
+        <img src="{{ 'tratamientos.jpeg' | asset_url }}" alt="Categoría 3" width="200" height="200">
+        <span>Tratamientos</span>
+      </div>
+      <div class="category-card">
+        <img src="{{ 'cuidado.webp' | asset_url }}" alt="Categoría 4" width="200" height="200">
+        <span>Cuidado Corporal</span>
+      </div>
     </div>
   </div>
-  <button class="carousel-arrow right" onclick="scrollCategories(1)">&#8594;</button>
 </section>
 
 {% schema %}
 {
   "name": "Carrusel",
-  "blocks": [
+  "settings": [
     {
-      "type": "category",
-      "name": "Categoría",
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Imagen de la categoría"
-        },
-        {
-          "type": "text",
-          "id": "title",
-          "label": "Nombre de la categoría"
-        }
-      ]
+      "type": "text",
+      "id": "title",
+      "label": "Título de la sección",
+      "default": "Nuestras categorías"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtítulo de la sección",
+      "default": "Descubre los productos por categoría"
     }
   ],
-  "max_blocks": 20,
   "presets": [
     {
       "name": "Carrusel de categorías"
@@ -51,5 +53,3 @@
   ]
 }
 {% endschema %}
-
-{{ 'carousel.js' | asset_url | script_tag }}

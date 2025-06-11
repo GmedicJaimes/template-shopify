@@ -1,0 +1,72 @@
+{{ 'products.css' | asset_url | stylesheet_tag }}
+
+<section class="products-section">
+  <h2>{{ section.settings.title }}</h2>
+  <p>{{ section.settings.subtitle }}</p>
+  <div class="products-grid">
+    <div class="product-card">
+      <img src="{{ 'producto1.jpg' | asset_url }}" alt="Crema Facial Hidratante" width="220" height="220">
+      <h3>Crema Facial Hidratante</h3>
+      <p class="price">$12.000</p>
+      <p class="description">Hidrata y suaviza tu piel con ingredientes naturales.</p>
+      <button type="button" class="add-to-cart-btn" data-product="1">Add</button>
+    </div>
+
+    <div class="product-card">
+      <img src="{{ 'producto2.webp' | asset_url }}" alt="Sérum Antiedad" width="220" height="220">
+      <h3>Sérum Antiedad</h3>
+      <p class="price">$18.500</p>
+      <p class="description">Reduce líneas de expresión y mejora la elasticidad.</p>
+      <button type="button" class="add-to-cart-btn" data-product="2">Add</button>
+    </div>
+
+    <div class="product-card">
+      <img src="{{ 'producto3.webp' | asset_url }}" alt="Gel Limpiador" width="220" height="220">
+      <h3>Gel Limpiador</h3>
+      <p class="price">$9.900</p>
+      <p class="description">Limpieza profunda sin resecar la piel y cuidado de manchas.</p>
+      <button type="button" class="add-to-cart-btn" data-product="3">Add</button>
+    </div>
+
+    <div class="product-card">
+      <img src="{{ 'producto4.jpg' | asset_url }}" alt="Protector Solar SPF50" width="220" height="220">
+      <h3>Protector Solar SPF50</h3>
+      <p class="price">$15.000</p>
+      <p class="description">Protección alta contra rayos UVA y UVB.</p>
+      <button type="button" class="add-to-cart-btn" data-product="4">Add</button>
+    </div>
+
+    <div class="product-card">
+      <img src="{{ 'producto5.jpg' | asset_url }}" alt="Tónico Facial Refrescante" width="220" height="220">
+      <h3>Tónico Facial Refrescante</h3>
+      <p class="price">$8.500</p>
+      <p class="description">Refresca y tonifica tu piel al instante.</p>
+      <button type="button" class="add-to-cart-btn" data-product="5">Add</button>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Sección de productos",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Título de la sección",
+      "default": "Nuestros productos"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtítulo de la sección",
+      "default": "Los mejores productos para tu cuidado personal"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sección de productos"
+    }
+  ]
+}
+{% endschema %}

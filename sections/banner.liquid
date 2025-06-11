@@ -9,8 +9,8 @@
       width="100%"
       height="600"
     >
-    <div class="content">
-      <h2 style="margin-top: 1rem;">{{ section.settings.message }}</h2>
+    <div class="banner-title banner-title--{{ section.settings.title_position }}">
+      <h2>{{ section.settings.message }}</h2>
     </div>
   </div>
   <div class="banner-image-two">
@@ -50,6 +50,17 @@
       "id": "message",
       "label": "Mensaje del banner",
       "default": "¡Bienvenido a nuestra tienda!"
+    },
+    {
+      "type": "select",
+      "id": "title_position",
+      "label": "Posición del título",
+      "default": "top",
+      "options": [
+        { "value": "top", "label": "Arriba" },
+        { "value": "center", "label": "Centro" },
+        { "value": "bottom", "label": "Abajo" }
+      ]
     }
   ],
   "presets": [

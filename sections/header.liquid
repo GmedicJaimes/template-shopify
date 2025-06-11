@@ -2,7 +2,11 @@
 
 <header>
   <h2 class="header__title">
-    {{ section.settings.title | link_to: routes.root_url }}
+    {% if section.settings.title != blank %}
+      {{ section.settings.title }}
+    {% else %}
+      SkinMarket
+    {% endif %}
   </h2>
 
   <div class="header__menu">

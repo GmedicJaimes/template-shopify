@@ -45,3 +45,25 @@
   border: none;
   background-color: transparent;
 }
+
+.cart-card {
+  display: flex;
+  align-items: center;
+  background: #f7f7f7;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.cart-card-info {
+  flex: 1;
+}
+.cart-card-price {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.cart-total {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 20px;
+}

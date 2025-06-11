@@ -29,20 +29,46 @@
         "category_4x8cX6": {
           "type": "category",
           "settings": {
-            "title": ""
+            "image": "shopify://shop_images/pet-and-owner-on-fall-walk.jpg",
+            "title": "Juegos Artificiales"
           }
         },
         "category_r7Nipf": {
           "type": "category",
           "settings": {
-            "title": ""
+            "image": "shopify://shop_images/iphone-detects-qr-code.jpg",
+            "title": "Rompiendo casas"
+          }
+        },
+        "category_fgcawr": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/iphone-detects-qr-code.jpg",
+            "title": "Revision de celulares"
+          }
+        },
+        "category_nH9HMC": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/fall-vegetable-box.jpg",
+            "title": "vegetales"
+          }
+        },
+        "category_8D9XjQ": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/golden-autumn-leaves.jpg",
+            "title": "kill the people"
           }
         }
       },
       "block_order": [
         "category_WmnRpk",
         "category_4x8cX6",
-        "category_r7Nipf"
+        "category_r7Nipf",
+        "category_fgcawr",
+        "category_nH9HMC",
+        "category_8D9XjQ"
       ],
       "settings": {}
     }

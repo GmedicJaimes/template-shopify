@@ -10,15 +10,10 @@
 {
   "sections": {
     "banner": {
-      "type": "banner",
-      "settings": {
-        "alt": "Banner",
-        "message": "Cuida tu piel, para que cuides tu alma!"
-      }
+      "type": "banner", 
     },
     "carousel": {
-      "type": "categories-carousel",
-      "settings": {}
+      "type": "categories-carousel"
     }
   },
   "order": [

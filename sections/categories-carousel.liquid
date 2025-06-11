@@ -1,0 +1,55 @@
+{{ 'carousel.css' | asset_url | stylesheet_tag }}
+
+<section class="categories-carousel">
+  <button class="carousel-arrow left" onclick="scrollCategories(-1)">&#8592;</button>
+  <div class="carousel-viewport">
+    <div class="carousel-track" id="carousel-track">
+      {% for block in section.blocks %}
+        <div class="category-card">
+          {% if block.settings.image != blank %}
+            <img
+              src="{{ block.settings.image | image_url: width: 200 }}"
+              alt="{{ block.settings.title | escape }}"
+              width="200"
+              height="200"
+            >
+          {% endif %}
+          <span>{{ block.settings.title }}</span>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <button class="carousel-arrow right" onclick="scrollCategories(1)">&#8594;</button>
+</section>
+
+{% schema %}
+{
+  "name": "Carrusel",
+  "blocks": [
+    {
+      "type": "category",
+      "name": "Categoría",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Imagen de la categoría"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Nombre de la categoría"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 20,
+  "presets": [
+    {
+      "name": "Carrusel de categorías"
+    }
+  ]
+}
+{% endschema %}
+
+{{ 'carousel.js' | asset_url | script_tag }}

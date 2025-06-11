@@ -1,10 +1,12 @@
-<div class="cart-modal" id="cart-modal" style="display: none;">
-  <div class="cart-modal__overlay" onclick="closeCartModal()"></div>
+<div id="cart-modal-overlay" class="cart-modal__overlay" onclick="closeCartModal()"></div>
+<div id="cart-modal" class="cart-modal">
   <div class="cart-modal__content">
     <h2>Tu Carrito</h2>
     <div class="cart-items">
       {% render 'cart-items' %}
     </div>
-    <button class="cart-modal__close" onclick="closeCartModal()">Cerrar</button>
+    <button class="cart-modal__close" onclick="closeCartModal()">
+      <img src="https://cdn-icons-png.flaticon.com/128/1828/1828747.png" alt="Cerrar Carrito" width="18" height="18">
+    </button>
   </div>
 </div>

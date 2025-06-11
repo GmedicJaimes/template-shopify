@@ -1,3 +1,5 @@
+{{ 'cart-modal.css' | asset_url | stylesheet_tag }}
+
 <header>
   <h2 class="header__title">
     {{ section.settings.title | link_to: routes.root_url }}
@@ -72,6 +74,6 @@
 }
 {% endschema %}
 
+{% render 'cart-modal' %}
 
-  {% render 'cart-modal' %}
-
+{{ 'cart-modal.js' | asset_url | script_tag }}

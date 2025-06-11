@@ -9,9 +9,17 @@
  */
 {
   "sections": {
-    
+    "banner": {
+      "type": "banner",
+      "settings": {}
+    },
+    "carousel": {
+      "type": "categories-carousel",
+      "settings": {}
+    }
   },
   "order": [
-    
+    "banner",
+    "carousel"
   ]
 }

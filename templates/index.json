@@ -11,10 +11,39 @@
   "sections": {
     "banner": {
       "type": "banner",
-      "settings": {}
+      "settings": {
+        "alt": "Banner",
+        "message": "¡Bienvenido a nuestra tienda!"
+      }
     },
     "carousel": {
       "type": "categories-carousel",
+      "blocks": {
+        "category_WmnRpk": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/rack-of-womens-clothing.jpg",
+            "title": "Ropa domestica"
+          }
+        },
+        "category_4x8cX6": {
+          "type": "category",
+          "settings": {
+            "title": ""
+          }
+        },
+        "category_r7Nipf": {
+          "type": "category",
+          "settings": {
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "category_WmnRpk",
+        "category_4x8cX6",
+        "category_r7Nipf"
+      ],
       "settings": {}
     }
   },
